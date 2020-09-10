@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'pembeli',
+    'home',
     'produk',
     'crispy_forms',
 ]
@@ -80,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'warung',
-        'USER': 'giko99',
-        'PASSWORD': 'gikoriyo382',
+        'USER': 'tatam',
+        'PASSWORD': 'katakanlah123',
         'HOST': 'localhost',
         'PORT': '',
     }
