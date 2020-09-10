@@ -1,6 +1,4 @@
 from django.shortcuts import render, redirect
-
-# Create your views here.
 from . import models, forms
 
 def index(req):
@@ -17,7 +15,7 @@ def input(req):
 
         if form_input.is_valid():
             form_input.save()
-        return redirect('/')
+        return redirect('/produk')
     
     produk = models.Produk.objects.all()    
     return render(req, 'produk/input.html', {
@@ -33,12 +31,12 @@ def detail(req, id):
 
 def delete(req, id):
     models.Produk.objects.filter(pk=id).delete()
-    return redirect('/')
+    return redirect('/produk')
 
 def update(req, id):
     if req.POST:
         produk = models.Produk.objects.filter(pk=id).update(nama=req.POST['nama'], jenis=req.POST['jenis'], harga=req.POST['harga'])
-        return redirect('/')
+        return redirect('/produk')
 
     produk = models.Produk.objects.filter(pk=id).first()    
     return render(req, 'produk/update.html', {

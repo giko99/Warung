@@ -14,41 +14,37 @@
     <!-- Brand/logo -->
     <a class="navbar-brand" href="/">Warung</a>
     <li class="nav-item">
-      <a class="navbar-brand" href="/produk/input">INPUT PRODUK</a>
+      <a class="navbar-brand" href="/pembeli/input">INPUT PEMBELI</a>
     </li>
   </nav><br>
   <div class="container">
-
-   
       <br>
       <table class="table table-striped">
         <thead class="thead-dark">
         <tr>
-            <th>No</th>
-            <th>Nama Produk</th>
-            <th>Jenis</th>
-            <th>Harga</th>
-            <th>Actions</th>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nama Pembeli</th>
+            <th scope="col">Alamat</th>
+            <th scope="col">No.Telpon</th>
+            <th scope="col">Action</th>
+          </tr>
         </tr>
       </thead>
         {% for d in data %}
         <tr>
-            <td>{{forloop.counter}}</td>
-            <td>{{d.nama}}</td>
-            <td>{{d.jenis}}</td>
-            <td>{{d.harga}}</td>
-            <td>   
-              <a type="button" class="btn btn-success" href="/produk/{{d.id}}" >Detail</a>
-              <a type="button" class="btn btn-warning" href="/produk/{{d.id}}/update">Edit</a>
-              <a type="button" class="btn btn-danger" href="/produk/{{d.id}}/delete">Hapus</a>
-            </td>
+          <td>{{forloop.counter}}</td>
+          <td>{{d.nama}}</td>
+          <td>{{d.alamat}}</td>
+          <td>{{d.telp}}</td>
+          <td>
+              <a class="btn btn-sm btn-success" href="/pembeli/{{d.id}}">Detail</a>
+              <a class="btn btn-sm btn-warning" href="/pembeli/{{d.id}}/update">Update</a>
+              <a class="btn btn-sm btn-danger" href="/pembeli/{{d.id}}/delete">Delete</a>
+          </td>
         </tr>
         {% endfor %}
-
       </table>
- 
   </div>
-
-
 </body>
 </html>
