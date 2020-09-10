@@ -35,7 +35,7 @@ def delete(req, id):
 
 def update(req, id):
     if req.POST:
-        produk = models.Produk.objects.filter(pk=id).update(nama=req.POST['nama'], jenis=req.POST['jenis'], harga=req.POST['harga'])
+        produk = models.Produk.objects.filter(pk=id).update(nama=req.POST['nama'], jenis=req.POST['jenis'], stock=req.POST['stock'], harga=req.POST['harga'])
         return redirect('/produk')
 
     produk = models.Produk.objects.filter(pk=id).first()    

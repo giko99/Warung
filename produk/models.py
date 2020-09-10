@@ -4,4 +4,5 @@ from django.db import models
 class Produk(models.Model):
     nama = models.CharField(max_length=255)
     jenis = models.CharField(max_length=255)
+    stock = models.IntegerField()
     harga = models.IntegerField()
