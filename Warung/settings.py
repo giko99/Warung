@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pembeli',
     'home',
     'produk',
+    'pengguna',
+    'pembeli',
+    'transaksi',
     'crispy_forms',
 ]
 
@@ -72,7 +74,6 @@ TEMPLATES = [
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 WSGI_APPLICATION = 'Warung.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -126,3 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR + "static",
+    '/var/www/static/',
+]

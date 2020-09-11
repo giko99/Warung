@@ -12,16 +12,12 @@
 <body>
   <div class="container">
     <p align="right"> 
-      <a onclick="goBack()" type="button" class="btn btn-primary mt-1" href="/">Back</a>
+      <a onclick="goBack()" type="button" class="btn btn-primary mt-1" href="/transaksi">Back</a>
       <br>
       <table class="table table-dark ">
+
         <tr>
-            <td>ID</td>
-            <td>:</td>
-            <td>{{data.id}}</td>    
-        </tr>
-        <tr>
-            <td>Nama Tanggal</td>
+            <td>Tanggal Transaksi</td>
             <td>:</td>
             <td>{{data.waktu}}</td>    
         </tr>
@@ -33,7 +29,7 @@
         <tr>
             <td>Keterangan</td>
             <td>:</td>
-            <td>Rp. {{data.ket}}</td>    
+            <td>{{data.ket}}</td>    
         </tr>
       </table>
       

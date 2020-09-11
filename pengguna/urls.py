@@ -4,7 +4,6 @@ from pengguna import views
 
 urlpatterns = [
     #crud pengguna
-    path('admin/', admin.site.urls),
     path('usr', views.usr),
     path('', views.show_pengguna),
     path('edit_pengguna/<int:id>', views.edit_pengguna),  

@@ -9,7 +9,7 @@ def usr(request):
         form = penggunaForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('/pengguna')
         else:
             print (form.errors)
     else:
@@ -29,7 +29,7 @@ def edit_pengguna(request, id):
         form = penggunaForm(request.POST, instance = data)
         if form.is_valid():  
             form.save()  
-            return redirect('/')
+            return redirect('/pengguna')
     return render(request, 'edit_pengguna.html',{
         'form':form,
         'data':data,
@@ -37,4 +37,4 @@ def edit_pengguna(request, id):
 def hapus(request, id):
     data = Pengguna.objects.get(id=id)
     data.delete()
-    return redirect("/")
+    return redirect("/pengguna")
